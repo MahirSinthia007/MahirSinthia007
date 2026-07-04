@@ -1,1 +1,23 @@
+name: Update README cards
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # This runs the action automatically every day at midnight
+  workflow_dispatch: # This allows you to trigger it manually anytime
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # This gives the action permission to save the card images into your repo
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate top languages card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&layout=compact&theme=visual_studio_code
+          path: profile/top-langs.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
 
