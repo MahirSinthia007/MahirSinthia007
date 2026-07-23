@@ -1,1 +1,2 @@
-[![Top Langs](https://vercel.app)](https://github.com/anuraghazra/github-readme-stats)
+Hey
+this is just what i tried to learn and learned duirng my undergraduate life
